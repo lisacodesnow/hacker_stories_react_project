@@ -20,9 +20,11 @@ const list = [
     objectID: 1,
   }
 ]
-function App(){
-  
-  const renderList = list.map( (item) =>(
+
+function List(){
+
+  return(
+ list.map( (item) =>(
 
     <li key={item.objectID}>
       <a href= {item.url}>{item.title}</a><br></br>
@@ -32,17 +34,27 @@ function App(){
     </li>
   )
   )
+  )
 
+}
+
+function Search (){
+
+  return(
+<div>
+   <label htmlFor='search'>Search:</label>
+    <input id="search" type="text"></input>
+</div>
+  )
+}
+function App(){
   
   return(
     <div>
       <h1> My Hacker Stories</h1>
-      <label htmlFor='search'>Search:</label>
-      <input id="search" type="text"></input>
-
+      <Search />
       <hr/>
-      
-       {renderList}
+       <List />
       
     </div>
   )
