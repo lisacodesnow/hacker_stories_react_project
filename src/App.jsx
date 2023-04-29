@@ -64,7 +64,7 @@ function App(){
       <h1> My Hacker Stories</h1>
       <Search  />
       <hr/>
-       <List item="Complex Site"/>
+       <List />
       
     </div>
   )
