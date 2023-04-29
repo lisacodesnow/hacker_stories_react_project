@@ -1,23 +1,27 @@
 import * as React from 'react';
 
+const Lists = (props) => (
+    <div>{props.title} 
+     
+    {props.url}
+     {props.author}
+     {props.num_comments}
+    
+</div>
+)
+
+
+
+
+
+
 
 
 function Practice(){
-
-var teaNames = ["honey", "apple", "chestnut", "fennel", "sea", 5]
-var myLikes = (likes) => (
-    `I like ${likes} tea. `
-)
-var mapFunction = teaNames.map(myLikes)
     return(
-        <div>
-            <h1>{mapFunction[0]}</h1>
-            <h1>{mapFunction[1]}</h1>
-            <h1>{mapFunction[2]}</h1>
-            <h1>{mapFunction[3]}</h1>
-            <h1>{mapFunction[4]}</h1>
-            <h1>{mapFunction[5]}</h1> 
-        </div>
+        <Lists title = "Hello"url = "http://hacker.com" author="Katherine"
+        num_comments="5"/>
+       
     )
 }
 

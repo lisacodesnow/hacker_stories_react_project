@@ -18,6 +18,15 @@ const list = [
     num_comments: 2,
     points: 5,
     objectID: 1,
+  },
+
+  {
+    title:"" ,
+    url:"" ,
+    author: "",
+    num_comments: "",
+    points: "",
+    objectID: "",
   }
 ]
 
@@ -27,10 +36,11 @@ function List(){
  list.map( (item) =>(
 
     <li key={item.objectID}>
-      <a href= {item.url}>{item.title}</a><br></br>
-      <span>{item.author}</span><br></br>
-      <span>{item.num_comments} </span><br></br>
+      <a href= {item.url}>{item.title}</a>
+      <span>{item.author}</span>
+      <span>{item.num_comments} </span>
      <span> {item.points}</span>
+     
     </li>
   )
   )
@@ -52,9 +62,9 @@ function App(){
   return(
     <div>
       <h1> My Hacker Stories</h1>
-      <Search />
+      <Search  />
       <hr/>
-       <List />
+       <List item="Complex Site"/>
       
     </div>
   )
