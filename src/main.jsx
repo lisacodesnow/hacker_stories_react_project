@@ -5,8 +5,10 @@ import Practice from './Practice'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
+ 
   <React.StrictMode>
     <App />
    <Practice/>
   </React.StrictMode>,
-)
+ 
+) 

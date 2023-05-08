@@ -30,7 +30,7 @@ const list = [
   }
 ]
 
-function List(){
+const List = () =>{
 
   return(
  list.map( (item) =>(
@@ -48,7 +48,7 @@ function List(){
 
 }
 
-function Search (){
+const Search = () =>{
 
   return(
 <div>
@@ -57,7 +57,8 @@ function Search (){
 </div>
   )
 }
-function App(){
+
+const App = () =>{
   
   return(
     <div>
