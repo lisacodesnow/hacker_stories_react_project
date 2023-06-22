@@ -1,52 +1,70 @@
 import * as React from 'react';
 
-const list = [
+const App = () =>{
+  
 
-  {
-    title: 'React',
-    url: 'https://reactjs.org/',
-    author: 'Jordan Walke',
-    num_comments: 3,
-    points: 4,
-    objectID: 0,
-  },
+  const stories = [
 
-  {
-    title: 'Redux',
-    url: 'https://redux.js.org/',
-    author: 'Dan Abramov, Andrew Clark',
-    num_comments: 2,
-    points: 5,
-    objectID: 1,
-  },
-
-  {
-    title:"" ,
-    url:"" ,
-    author: "",
-    num_comments: "",
-    points: "",
-    objectID: "",
-  }
-]
-
-const List = () =>{
-
+    {
+      title: 'React',
+      url: 'https://reactjs.org/',
+      author: 'Jordan Walke',
+      num_comments: 3,
+      points: 4,
+      objectID: 0,
+    },
+  
+    {
+      title: 'Redux',
+      url: 'https://redux.js.org/',
+      author: 'Dan Abramov, Andrew Clark',
+      num_comments: 2,
+      points: 5,
+      objectID: 1,
+    },
+  
+    {
+      title:"" ,
+      url:"" ,
+      author: "",
+      num_comments: "",
+      points: "",
+      objectID: "",
+    }
+  ]
   return(
- list.map( (item) =>(
+    <div>
+      <h1> My Hacker Stories</h1>
+      <Search  />
+      <hr/>
+       <List list={stories} />
+      
+    </div>
+  )
+}
 
-    <li key={item.objectID}>
-      <a href= {item.url}>{item.title}</a>
-      <span>{item.author}</span>
-      <span>{item.num_comments} </span>
-     <span> {item.points}</span>
+
+const List = (props) =>(
+
+<ul>
+ {props.list.map((item) =>(
+  <Item key = {item.objectID} item={item}/>
+
+  ))}
+</ul>
+);
+
+const Item = (props) =>(
+
+  <li key={props.item.objectID}>
+    <span>
+      <a href= {props.item.url}>{props.item.title}</a></span>
+      <span>{props.item.author}</span>
+      <span>{props.item.num_comments} </span>
+     <span> {props.item.points}</span>
      
     </li>
-  )
-  )
-  )
-
-}
+)
 
 const Search = () =>{
 
@@ -61,17 +79,6 @@ const Search = () =>{
   )
 }
 
-const App = () =>{
-  
-  return(
-    <div>
-      <h1> My Hacker Stories</h1>
-      <Search  />
-      <hr/>
-       <List />
-      
-    </div>
-  )
-}
+
 
 export default App;
